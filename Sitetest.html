@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+  <div id="player">
+    <a href="http://www.adobe.com/go/getflashplayer"><img src="https://d2iwzbhgddzdwl.cloudfront.net/files/images/flashreq.png" alt="Get Adobe Flash player" /></a>
+  </div>
+  <script type="text/javascript" src="//octoshape-a.akamaihd.net/eps/js/swfobject.js"></script>
+  <script type="text/javascript">
+    var player_id = "player";
+    var player_width = 960;
+    var player_height = 540;
+    var player_streams = [{
+      id: 'my_stream',
+      stream: 'octoshape://streams.octoshape.net/wkba/live/uplink/flv/ch2/1200k'
+    }];
+    //optional. starts the stream when the player is ready
+    var player_stream = "my_stream";
+    var params = {
+      allowFullScreen: true,
+      scale: 'noscale',
+      allowScriptAccess: 'always'
+    };
+    var attributes = {
+      id: player_id,
+      name: player_id
+    };
+    swfobject.embedSWF(document.location.protocol + '//octoshape-a.akamaihd.net/eps/players/infinitehd4/player.swf', player_id, player_width, player_height, "10.2.0", null, null, params, attributes);
+  </script>
+  <div id="limelight_player_295189"></div>
+  <script src="//video.limelight.com/player/limelightjs-player.js?orgId=ca8b61ca3a3a4f04b8a2677dfc44e196"></script>
+  <script>
+    LimelightPlayerUtil.embed({
+      'allowFullScreen': 'true',
+      'height': 540,
+      'width': 960,
+      'playerId': 'limelight_player_295189',
+      'playerForm': 'Player',
+      'mediaId': 'fc2844e970504943ad913041e6d10d3b',
+      'autoplay': 'true'
+    });
+  </script>
+</body>
+
+</html>
